@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   calloutText: {
     color: '#0a2b06',
     fontSize: 14,
-    fontFamily: 'Lato', sansSerif,
+    fontFamily: 'Lato_100Thin',
   }
 })
 

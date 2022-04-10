@@ -1,5 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
+import { 
+  useFonts, 
+  Lato_100Thin,
+  Lato_400Regular,
+  Lato_900Black
+} from '@expo-google-fonts/lato';
 
 export default function App() {
   return (
