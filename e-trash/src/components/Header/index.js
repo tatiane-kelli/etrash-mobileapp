@@ -4,11 +4,17 @@ import { AntDesign } from '@expo/vector-icons';
 import { BorderlessButton } from 'react-native-gesture-handler';
 
 const Header = ({navigation}) => {  
+  function handleNavigateToHomepage() {
+    navigation.navigate('Homepage');
+  }
+
   return(
     <View style={styles.container}>
-      <Image 
-        source={require('../../../assets/logo.png')}
-      />
+      <BorderlessButton onPress={() => handleNavigateToHomepage}>
+        <Image 
+          source={require('../../../assets/logo.png')}
+        />
+      </BorderlessButton>
       <BorderlessButton onPress={navigation.goBack}> 
         <AntDesign name="left" size={24} color="black" />
       </BorderlessButton>
