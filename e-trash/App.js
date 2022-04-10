@@ -21,7 +21,7 @@ export default function App() {
     return (
       <>
         <View style={styles.container}>
-          <StatusBar backgroundColor="transparent" translucent barStyle="dark-content" />
+          <StatusBar backgroundColor="transparent"/>
           <Routes/>
         </View>
       </>
