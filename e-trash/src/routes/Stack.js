@@ -5,9 +5,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const { Navigator, Screen } = createStackNavigator();
 
-import ChargeScreen from "../pages/SplashPage";
 import MapPage from "../pages/MapPage";
-import Header from "../components/Header";
+//import Header from "../components/Header";
 
 const Routes = () => {
   return(
@@ -20,10 +19,6 @@ const Routes = () => {
         <Screen 
           name="Homepage" 
           component={MapPage}
-          options={{ 
-            headerShown: true,
-            header: <Header/>
-          }}
         />
       </Navigator>
     </NavigationContainer>

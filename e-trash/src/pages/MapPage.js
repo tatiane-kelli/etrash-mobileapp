@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Dimensions, Text } from 'react-native';
 //import { useNavigation } from '@react-navigation/native';
 import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
+import MapMarker from "../../assets/map-marker.png"
 
 const MapPage = () => {
   // function handleNavigateToDetails() {
@@ -21,7 +22,7 @@ const MapPage = () => {
         style={styles.mapStyle}
       >
         <Marker 
-          icon={mapMarkerImg}
+          icon={MapMarker}
           calloutAnchor={{ x: 2.7, y: 0.8 }}
           coordinate={{ 
             latitude: -18.9004394,
