@@ -20,10 +20,16 @@ const Routes = () => {
         <Screen 
           name="Homepage" 
           component={MapPage}
+          screenOptions={{ 
+            headerShown: true, 
+          }}
         />
         <Screen 
           name="Storage Details" 
           component={StorageDetails}
+          screenOptions={{ 
+            headerShown: true, 
+          }}
         />
       </Navigator>
     </NavigationContainer>
