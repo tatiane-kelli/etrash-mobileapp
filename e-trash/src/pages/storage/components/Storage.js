@@ -5,8 +5,8 @@ import {
     Image
 } from "react-native";
 
-import Imagem1 from "../../../../assets/1.png";
-import Imagem2 from "../../../../assets/2.png";
+import Imagem1 from "../../../../assets/teste1.png";
+import Imagem2 from "../../../../assets/teste2.png";
 
 const Storage = () => {
     return (
