@@ -1,9 +1,12 @@
 import React from "react";
 import { StyleSheet, View, Image } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 import { BorderlessButton } from 'react-native-gesture-handler';
 
 const Header = ({navigation}) => {  
+  let navigation = useNavigation();
+
   function handleNavigateToHomepage() {
     navigation.navigate('Homepage');
   }
@@ -15,7 +18,7 @@ const Header = ({navigation}) => {
           source={require('../../../assets/logo.png')}
         />
       </BorderlessButton>
-      <BorderlessButton onPress={navigation.goBack}> 
+      <BorderlessButton onPress={() => goBack()}> 
         <AntDesign name="left" size={24} color="black" />
       </BorderlessButton>
     </View>
