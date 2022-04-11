@@ -1,13 +1,15 @@
 import React from 'react';
 import { StyleSheet, View, Dimensions, Text } from 'react-native';
-//import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
 import MapMarker from "../../assets/map-marker.png"
 
 const MapPage = () => {
-  // function handleNavigateToDetails() {
-  //   navigation.navigate('Details');
-  // }
+  let navigation = useNavigation();
+
+  function handleNavigateToDetails() {
+    navigation.navigate('Storage Details');
+  }
 
   return(
     <View style={styles.container}>
@@ -28,6 +30,7 @@ const MapPage = () => {
             latitude: -18.9004394,
             longitude: -41.9692379,
           }}
+          onPress={handleNavigateToDetails}
         >
           <Callout tooltip={true}>
             <View style={styles.calloutContainer}>
