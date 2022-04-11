@@ -5,16 +5,17 @@ import {
     TouchableOpacity,
     Image
 } from "react-native";
-
 import WhatsIcon from '../../../../assets/whatsappicon.png';
 
-export default function ButtonWhats(){
-    return<View>
-        <TouchableOpacity style={styles.button}>
-            <Image style={styles.icon}source={WhatsIcon}/>
-            <Text style={styles.text}>FALAR</Text>
-        </TouchableOpacity>
-    </View>
+const ButtonWhats = () => {
+    return (
+        <View>
+            <TouchableOpacity style={styles.button}>
+                <Image style={styles.icon} source={WhatsIcon}/>
+                <Text style={styles.text}>FALAR</Text>
+            </TouchableOpacity>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
@@ -34,3 +35,4 @@ const styles = StyleSheet.create({
         marginLeft:5
     },
 })
+export default ButtonWhats;
