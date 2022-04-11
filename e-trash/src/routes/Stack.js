@@ -6,6 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 const { Navigator, Screen } = createStackNavigator();
 
 import MapPage from "../pages/MapPage";
+import StorageDetails from "./pages/storage/index";
 //import Header from "../components/Header";
 
 const Routes = () => {
@@ -19,6 +20,10 @@ const Routes = () => {
         <Screen 
           name="Homepage" 
           component={MapPage}
+        />
+        <Screen 
+          name="Storage Details" 
+          component={StorageDetails}
         />
       </Navigator>
     </NavigationContainer>
