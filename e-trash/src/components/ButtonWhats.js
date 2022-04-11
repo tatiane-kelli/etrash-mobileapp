@@ -2,16 +2,15 @@ import {
     View,
     Text,
     StyleSheet,
-    TouchableOpacity,
-    Image
+    TouchableOpacity
 } from "react-native";
-import WhatsIcon from '../../../../assets/whatsappicon.png';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const ButtonWhats = () => {
     return (
         <View>
             <TouchableOpacity style={styles.button}>
-                <Image style={styles.icon} source={WhatsIcon}/>
+                <FontAwesome5 name="whatsapp" size={22} color="black" />
                 <Text style={styles.text}>FALAR</Text>
             </TouchableOpacity>
         </View>
@@ -33,6 +32,6 @@ const styles = StyleSheet.create({
         fontSize:20,
         color:'#FFF',
         marginLeft:5
-    },
+    }
 })
 export default ButtonWhats;

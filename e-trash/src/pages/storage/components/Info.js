@@ -1,30 +1,27 @@
 import { 
     Text,
     View,
-    StyleSheet,
-    Image,
+    StyleSheet
 } from "react-native";
-
-import clock from '../../../../assets/clock.png';
-import location from '../../../../assets/location.png';
-import phone from '../../../../assets/phone.png';
+import { Entypo } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 export default function Info(){
     return <View style={styles.divInfo}>
             <View style={styles.info}>
-                <Image source={clock} style={styles.icon}/>
+                <FontAwesome5 name="clock" size={22} color="black" />
                 <Text style={styles.information}>
                     Aberto das 7h às 17h
                 </Text >
             </View>
             <View style={styles.info}>
-                <Image source={location} style={styles.icon}/>
+                <Entypo name="location-pin" size={22} color="#0892d1" />
                 <Text style={styles.information}>
                     Rua X, n°0, bairro Y
                 </Text>
             </View>
             <View style={styles.info}>
-                <Image source={phone} style={styles.icon}/>
+                <FontAwesome5 name="phone-alt" size={24} color="black" />
                 <Text style={styles.information}>
                     (xx) xxxxx-xxxx
                 </Text>
@@ -44,10 +41,6 @@ const styles = StyleSheet.create({
         fontSize:18,   
         paddingBottom:15,
         marginLeft: 10,
-    },
-    icon:{
-        width:22,
-        height:25    
     }
 })
 
