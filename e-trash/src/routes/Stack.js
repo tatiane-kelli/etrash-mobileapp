@@ -7,29 +7,18 @@ const { Navigator, Screen } = createStackNavigator();
 
 import MapPage from "../pages/MapPage";
 import StorageDetails from "../pages/storage/index";
-//import Header from "../components/Header";
 
 const Routes = () => {
   return(
     <NavigationContainer>
-      <Navigator 
-        screenOptions={{ 
-          headerShown: false, 
-          cardStyle: { backgroundColor: '#F2F3F5' }
-      }}>
+      <Navigator>
         <Screen 
           name="Homepage" 
-          component={MapPage}
-          screenOptions={{ 
-            headerShown: true, 
-          }}
+          component={MapPage}        
         />
         <Screen 
           name="Storage Details" 
           component={StorageDetails}
-          screenOptions={{ 
-            headerShown: true, 
-          }}
         />
       </Navigator>
     </NavigationContainer>
