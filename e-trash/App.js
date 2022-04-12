@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import { 
   useFonts, 
   Lato_100Thin,
@@ -16,7 +16,7 @@ export default function App() {
   });
 
   if(!fontsLoaded) {
-    return null;
+    return null
   } else {
     return (
       <>
