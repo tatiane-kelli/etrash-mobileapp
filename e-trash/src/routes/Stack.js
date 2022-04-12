@@ -1,28 +1,28 @@
-import React from "react";
-
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-
-const { Navigator, Screen } = createStackNavigator();
 
 import MapPage from "../pages/MapPage";
 import StorageDetails from "../pages/storage/index";
 
-const Routes = () => {
+const Routes = () => {  
+  const Stack = createStackNavigator();
+
   return(
     <NavigationContainer>
-      <Navigator>
-        <Screen 
+      <Stack.Navigator initialRouteName="Homepage">
+        <Stack.Screen 
+          options={{headerShown: false}}
           name="Homepage" 
-          component={MapPage}        
+          component={MapPage} 
         />
-        <Screen 
+        <Stack.Screen 
+          options={{headerShown: false}}
           name="Storage Details" 
-          component={StorageDetails}
+          component={StorageDetails} 
         />
-      </Navigator>
+      </Stack.Navigator>
     </NavigationContainer>
-  );
+  )
 }
 
 export default Routes;

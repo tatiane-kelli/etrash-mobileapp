@@ -7,7 +7,7 @@ import Info from './components/Info';
 import Storage from './components/Storage';
 import ButtonWhats from '../../components/ButtonWhats';
 
-const StorageDetails = () => {
+const StorageDetails = ({navigation}) => {
     return(
         <View>
             <View>

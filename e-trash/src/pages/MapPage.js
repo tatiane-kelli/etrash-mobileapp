@@ -1,12 +1,9 @@
 import React from 'react';
 import { StyleSheet, View, Dimensions, Text } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
 import MapMarker from "../../assets/map-marker.png"
 
-const MapPage = () => {
-  let navigation = useNavigation();
-
+const MapPage = ({navigation}) => {
   function handleNavigateToDetails() {
     navigation.navigate('Storage Details');
   }
