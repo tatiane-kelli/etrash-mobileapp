@@ -28,7 +28,7 @@ const MapPage = ({navigation}) => {
             latitude: -18.8681682,
             longitude: -41.9557001,
           }}
-          onPress={() => navigation.navigate("Details")}
+          onPress={() => navigation.navigate("Details")} //navegar para a página de detalhes do depósito
         >
           <Callout tooltip={true}>
             <View style={styles.calloutContainer}>

@@ -6,13 +6,13 @@ import { BorderlessButton } from 'react-native-gesture-handler';
 const Header = ({navigation}) => {  
   return(
     <View style={styles.container}>
-      <BorderlessButton onPress={() => navigation.navigate("Home")}>
+      <BorderlessButton onPress={() => navigation.navigate("Home")}> 
         <Image 
           source={require('../../assets/logo-header.png')}
           style={styles.logoStyle}
         />
       </BorderlessButton>
-      <BorderlessButton onPress={() => goBack()} style={styles.buttonStyle}> 
+      <BorderlessButton onPress={() => goBack()} style={styles.buttonStyle}>
         <AntDesign name="arrowleft" size={40} color="#121413" />
       </BorderlessButton>
     </View>
