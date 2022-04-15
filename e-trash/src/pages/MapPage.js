@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, Dimensions, Text } from 'react-native';
 import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
-import { Entypo } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
+import Header from "../components/Header";
 
 const MapPage = ({navigation}) => {
   function handleNavigateToDetails() {
@@ -10,25 +11,28 @@ const MapPage = ({navigation}) => {
 
   return(
     <View style={styles.container}>
-
+      <View style={styles.headerStyle}>
+        <Header />
+      </View>
+      <View>
       <MapView
         provider={PROVIDER_GOOGLE}
         initialRegion={{
-          latitude: -18.9004394,
-          longitude: -41.9692379,
+          latitude: -18.868605,
+          longitude: -41.955342,
           latitudeDelta: 0.008,
           longitudeDelta: 0.008,
         }} 
         style={styles.mapStyle}
       >
         <Marker 
-          icon={ <Entypo name="location-pin" size={24} color="#346138" /> }
+          icon={ <Ionicons name="location-sharp" size={50} color="#346138" /> }
           calloutAnchor={{ x: 2.7, y: 0.8 }}
           coordinate={{ 
-            latitude: -18.8666586,
-            longitude: -42.2858589,
+            latitude: -18.8681682,
+            longitude: -41.9557001,
           }}
-          onPress={handleNavigateToDetails}
+          onPress={() => handleNavigateToDetails}
         >
           <Callout tooltip={true}>
             <View style={styles.calloutContainer}>
@@ -37,6 +41,7 @@ const MapPage = ({navigation}) => {
           </Callout>
         </Marker>
       </MapView>
+      </View>
     </View>
   );
 
@@ -45,6 +50,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     position: 'relative',
+  },
+  headerStyle :{
+    paddingTop: 20,
   },
   mapStyle: {
     width: Dimensions.get('window').width,
