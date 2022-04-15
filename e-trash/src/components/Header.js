@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View, Image, Dimensions } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import { BorderlessButton } from 'react-native-gesture-handler';
 
@@ -12,11 +12,12 @@ const Header = ({navigation}) => {
     <View style={styles.container}>
       <BorderlessButton onPress={() => handleNavigateToHomepage}>
         <Image 
-          source={require('../../../assets/logo.png')}
+          source={require('../../assets/logo-header.png')}
+          style={styles.logoStyle}
         />
       </BorderlessButton>
-      <BorderlessButton onPress={() => goBack()}> 
-        <AntDesign name="left" size={24} color="black" />
+      <BorderlessButton onPress={() => goBack()} style={styles.buttonStyle}> 
+        <AntDesign name="arrowleft" size={40} color="#121413" />
       </BorderlessButton>
     </View>
   );
@@ -25,15 +26,18 @@ const Header = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fbfbf8',
-    width: 100,
-    height: 100,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    width: Dimensions.get('window').width,
   },
   logoStyle: {
-    width: 55,
-    height: 24
+    width: 150,
+    height: 100,
+    padding: 20
+  },
+  buttonStyle: {
+    padding: 20,
   }
 })
 
