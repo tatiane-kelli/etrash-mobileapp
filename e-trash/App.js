@@ -6,7 +6,8 @@ import {
   Lato_400Regular,
   Lato_900Black
 } from '@expo-google-fonts/lato';
-import Routes from './src/routes/Stack';
+//import Routes from './src/routes/Stack';
+import MapPage from "./src/pages/MapPage";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -22,7 +23,7 @@ export default function App() {
       <>
         <View style={styles.container}>
           <StatusBar backgroundColor="transparent"/>
-          <Routes/>
+          <MapPage/>
         </View>
       </>
     );
