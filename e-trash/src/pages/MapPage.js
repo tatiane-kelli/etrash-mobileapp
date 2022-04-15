@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Dimensions, Text } from 'react-native';
 import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
-import MapMarker from "../../assets/map-marker.png"
+import { Entypo } from '@expo/vector-icons';
 
 const MapPage = ({navigation}) => {
   function handleNavigateToDetails() {
@@ -10,6 +10,7 @@ const MapPage = ({navigation}) => {
 
   return(
     <View style={styles.container}>
+
       <MapView
         provider={PROVIDER_GOOGLE}
         initialRegion={{
@@ -21,11 +22,11 @@ const MapPage = ({navigation}) => {
         style={styles.mapStyle}
       >
         <Marker 
-          icon={MapMarker}
+          icon={ <Entypo name="location-pin" size={24} color="#346138" /> }
           calloutAnchor={{ x: 2.7, y: 0.8 }}
           coordinate={{ 
-            latitude: -18.9004394,
-            longitude: -41.9692379,
+            latitude: -18.8666586,
+            longitude: -42.2858589,
           }}
           onPress={handleNavigateToDetails}
         >
