@@ -2,7 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import MapPage from "../pages/MapPage";
-import StorageDetails from "../pages/storage/index";
+import StorageDetails from "../pages/storage";
 
 const Routes = () => {  
   const Stack = createStackNavigator();
@@ -17,7 +17,7 @@ const Routes = () => {
         />
         <Stack.Screen 
           options={{headerShown: false}}
-          name="Storage Details" 
+          name="Details" 
           component={StorageDetails} 
         />
       </Stack.Navigator>

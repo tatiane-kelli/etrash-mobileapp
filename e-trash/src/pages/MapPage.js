@@ -5,10 +5,6 @@ import { Ionicons } from '@expo/vector-icons';
 import Header from "../components/Header";
 
 const MapPage = ({navigation}) => {
-  function handleNavigateToDetails() {
-    navigation.navigate('Storage Details');
-  }
-
   return(
     <View style={styles.container}>
       <View style={styles.headerStyle}>
@@ -32,7 +28,7 @@ const MapPage = ({navigation}) => {
             latitude: -18.8681682,
             longitude: -41.9557001,
           }}
-          onPress={() => handleNavigateToDetails}
+          onPress={() => navigation.navigate("Details")}
         >
           <Callout tooltip={true}>
             <View style={styles.calloutContainer}>
