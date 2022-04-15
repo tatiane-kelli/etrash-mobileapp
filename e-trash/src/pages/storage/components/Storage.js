@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
         marginTop:35
     },
     image:{
-        width: 45,
+        width: 140,
+        height: 140,
         shadowColor: "#000",
         shadowOffset: {
 	        width: 0,

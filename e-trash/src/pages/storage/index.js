@@ -1,16 +1,19 @@
 import { 
     View,
-    StyleSheet,
-    Text
+    StyleSheet
 } from "react-native";
 
 import Info from './components/Info';
 import Storage from './components/Storage';
 import ButtonWhats from '../../components/ButtonWhats';
+import Header from '../../components/Header';
 
 const StorageDetails = ({navigation}) => {
     return(
         <View>
+            <View>
+                <Header />
+            </View>
             <View>
                 <Storage/>
             </View>
@@ -30,8 +33,8 @@ const styles = StyleSheet.create({
         width:'100%',
         justifyContent:'center',
         padding: 20,
-        marginTop:20
-        
+        marginTop: 20,
+        marginRight: 20
     }
 })
 

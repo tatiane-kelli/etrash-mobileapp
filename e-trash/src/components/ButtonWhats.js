@@ -10,7 +10,7 @@ const ButtonWhats = () => {
     return (
         <View>
             <TouchableOpacity style={styles.button}>
-                <FontAwesome5 name="whatsapp" size={22} color="black" />
+                <FontAwesome5 name="whatsapp" size={22} color="white" />
                 <Text style={styles.text}>FALAR</Text>
             </TouchableOpacity>
         </View>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     text:{
         fontSize:20,
         color:'#FFF',
-        marginLeft:5
+        marginLeft: 15
     }
 })
 export default ButtonWhats;
