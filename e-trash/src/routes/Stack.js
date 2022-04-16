@@ -2,7 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import MapPage from "../pages/MapPage";
-import StorageDetails from "../pages/storage";
+import StorageDetails from "../pages/storage/index";
 
 const Routes = () => {  
   const Stack = createStackNavigator();
